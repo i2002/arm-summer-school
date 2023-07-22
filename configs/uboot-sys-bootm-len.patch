@@ -1,0 +1,26 @@
+diff --git a/boot/bootm.c b/boot/bootm.c
+index 00c00aef84..6fe25d35c1 100644
+--- a/boot/bootm.c
++++ b/boot/bootm.c
+@@ -35,7 +35,7 @@
+ 
+ #ifndef CONFIG_SYS_BOOTM_LEN
+ /* use 8MByte as default max gunzip size */
+-#define CONFIG_SYS_BOOTM_LEN	0x800000
++#define CONFIG_SYS_BOOTM_LEN	16 * 0x800000
+ #endif
+ 
+ #define MAX_CMDLINE_SIZE	SZ_4K
+diff --git a/include/configs/pico-imx8mq.h b/include/configs/pico-imx8mq.h
+index 3f105ed77a..5892e76ca8 100644
+--- a/include/configs/pico-imx8mq.h
++++ b/include/configs/pico-imx8mq.h
+@@ -11,7 +11,7 @@
+ #include <asm/arch/imx-regs.h>
+ #include "imx_env.h"
+ 
+-#define CONFIG_SYS_BOOTM_LEN		(32 * SZ_1M)
++#define CONFIG_SYS_BOOTM_LEN		(64 * SZ_1M)
+ 
+ #define CONFIG_SPL_MAX_SIZE		(148 * 1024)
+ #define CONFIG_SYS_MONITOR_LEN		(512 * 1024)
