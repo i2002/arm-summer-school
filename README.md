@@ -1,4 +1,9 @@
 # ARM summer school
+## Descriere
+Compilare și testare firmware și OS pentru placă development TechNexion Pico Pi IMX8M, în cadrul ARM Development Google Summer School.
+
+Documentație prezentări și laborator: https://ocw.cs.pub.ro/courses/ass.
+
 ## Componente
 - `buildroot` (https://github.com/buildroot/buildroot): construiește rootfs-ul pentru inițializarea imaginii de linux (cu toate utilitarele și aplicațiile instalate)
 - `firmware` (http://sources.buildroot.net/firmware-imx/): firmware binar pentru diverse componente de pe placă
@@ -13,6 +18,4 @@
 - `toolchain`: toolchain de cross compiling pentru arhitectura armv8 (aarch64)
 - `u-boot-tn-imx`: bootloaderul u-boot care generează firmware-ul bl2 și bl33 și pregătește inițializarea kenrelului (configurat pentru permiterea unui kernel mai mare de 8MB)
 
-## Makefile
-
-## Idei
+- `configs`: configurările de compilare și patch-urile aplicate pentru kernel, uboot și buildroot
